@@ -59,3 +59,29 @@ else:
 
 
 .....
+
+
+
+#kullanıcı adı ve parola kontrolu
+defkullanıcı = "yazılım"
+defparola = "1234"
+
+while (True):
+    kullanıcı = input("kullanıcı adınızı giriniz:")
+    parola =   input( " parolanızı giriniz:")
+    if ((defkullanıcı == kullanıcı ) and ( parola== defparola)):
+        print("hoşgeldiniz")
+        break
+    elif ((defkullanıcı != kullanıcı ) and ( parola== defparola)):
+        print("kullanıcı adı yanlış")
+    elif ((defkullanıcı == kullanıcı ) and ( parola!= defparola)):
+        print("parolanız yanlış")
+        print("parolanızı değiştirmek istermsiniz? (E/H)")
+        cevap = input()
+        if (cevap == "E" ):
+            yeniparola = input("yeni parola:")
+            print("lütfen bekleyiniz")
+            defparola = yeniparola
+            print("başarıyla değiştirildi")
+    else:
+        print("tekrar deneyiniz")
